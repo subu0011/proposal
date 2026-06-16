@@ -3,6 +3,7 @@
 const helloBtn = document.getElementById("helloBtn");
 const overlay = document.getElementById("overlay");
 const bgMusic = document.getElementById("bgMusic");
+const yesMusic = document.getElementById("yesMusic");
 
 helloBtn.addEventListener("click", () => {
     overlay.style.display = "none";
@@ -131,6 +132,13 @@ const message = document.getElementById("message");
 const yesPopup = document.getElementById("yesPopup");
 
 yesBtn.addEventListener("click", () => {
+
+    // Pehla song band
+bgMusic.pause();
+bgMusic.currentTime = 0;
+
+// Dusra song start
+yesMusic.play().catch(() => {});
 
     message.innerHTML = `
     
